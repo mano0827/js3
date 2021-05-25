@@ -3,10 +3,9 @@
 
   const tableBody = document.getElementById('todo-body')
 
-  const tableRecords = document.createElement('tr');
-  tableBody.appendChild(tableRecords);
 
   document.querySelector('button').addEventListener('click', () => {
+    const tableRecords = document.createElement('tr');
     const tableId = document.createElement('td');
     const tableComment = document.createElement('td');
     const tableStatus = document.createElement('button');
@@ -16,14 +15,14 @@
     tableStatus.textContent = '作業中';
     tableAction.textContent = '削除';
 
-    tableBody.appendChild(tableId);
-    tableBody.appendChild(tableComment);
-    tableBody.appendChild(tableStatus);
-    tableBody.appendChild(tableAction);
+    tableBody.appendChild(tableRecords);
+    tableRecords.appendChild(tableId);
+    tableRecords.appendChild(tableComment);
+    tableRecords.appendChild(tableStatus);
+    tableRecords.appendChild(tableAction);
 
-
-    tableComment = text.value;
-    document.querySelector('td'), appendChild(tableComment)
+    tableComment.innerHTML = text.value;
+    text.value = "";
 
   });
 }
