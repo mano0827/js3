@@ -1,4 +1,4 @@
-
+/* 
 table {
  counter-reset: rowCount -1;
 }
@@ -9,4 +9,4 @@ table > tbody > tr{
 
 table > tbody > tr > td:first-child::before {
   content: counter(rowCount);
-}
+} */
